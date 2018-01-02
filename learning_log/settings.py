@@ -145,7 +145,9 @@ if os.getcwd()=='/app':
 
     SECURE_PROXY_SSL_HEADER=('HTTP_X_FORWARDED_PROTO','https')
 
-    ALLOWED_HOSTS=['*']
+    ALLOWED_HOSTS=['yi-note.herokuapp.com']
+
+    DEBUG=False
 
 BASE_DIR=os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT='staticfiles'
