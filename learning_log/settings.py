@@ -137,7 +137,7 @@ BOOTSTRAP3={
 
 
 #Heroku设置
-if os.getcwd()=='/app':
+if os.getcwd()=='/apps':
     import dj_database_url
     DATABASES={
         'default':dj_database_url.config(default='postgres://localhost')
