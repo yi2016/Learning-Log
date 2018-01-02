@@ -125,6 +125,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT='/static'
 
 #我的设置
 LOGIN_URL='/users/login'
@@ -133,6 +134,8 @@ LOGIN_URL='/users/login'
 BOOTSTRAP3={
     'include_jquery':True,
 }
+
+
 
 #Heroku设置
 if os.getcwd()=='/app':
