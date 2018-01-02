@@ -125,7 +125,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT='/static'
 
 #我的设置
 LOGIN_URL='/users/login'
@@ -138,7 +137,7 @@ BOOTSTRAP3={
 
 
 #Heroku设置
-if os.getcwd()=='/app':
+if os.getcwd()=='/apps':
     import dj_database_url
     DATABASES={
         'default':dj_database_url.config(default='postgres://localhost')
@@ -149,4 +148,7 @@ if os.getcwd()=='/app':
     ALLOWED_HOSTS=['*']
 
     BASE_DIR=os.path.dirname(os.path.abspath(__file__))
-    STATIC_ROOT=os.path.join(BASE_DIR,'static')
+    STATIC_ROOT='staticfiles'
+    STATICFILES_DIRS=(
+        os.path.join(BASE_DIR,'static')
+    )
